@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<body>
+	<script language="Javascript">
+		function Middelaar(getal1, getal2, getal3) {
+			var getal1 = window.document.form.getal1.value;
+			var getal2 = window.document.form.getal2.value;
+			var getal3 = window.document.form.getal3.value;
+
+			var gemiddelden = ((getal1 * 1) + (getal2 * 1) + (getal3 * 1)) / 3;
+			var afronden = gemiddelden.toFixed(2);
+			alert("gemiddelde is" + afronden);
+		}
+	</script>
+	<form name="form">
+		1<input type="text" name="getal1" id="getal1" value="" required="required"></br>
+		2<input type="text" name="getal2" id="getal2" value="" required="required"></br>
+		3<input type="text" name="getal3" id="getal3" value="" required="required"></br>
+
+		</br><input type="button" onClick="Middelaar()" id="gemiddelde" value="gemiddelde"></br>
+	</form>
+</body>
+</html>

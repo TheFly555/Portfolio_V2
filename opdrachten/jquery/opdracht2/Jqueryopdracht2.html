@@ -1,0 +1,53 @@
+
+<html>
+<head>
+	<title>Opdracht 2 Jquery</title>
+	<meta charset="UTF-8" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script type="text/javascript">
+
+
+$(document).ready(function(){
+$( "button" ).mouseenter(function() {
+    $( "#kleur1" ).fadeIn(1000);
+    $( "#kleur2").fadeIn(1000);
+  })
+  .mouseleave(function() {
+    $( "#kleur1" ).fadeOut(500);
+    $( "#kleur2").fadeOut(500);
+  });
+  })
+</script>
+<style media="screen">
+body{
+background-color:white;
+}
+#kleur1{
+
+width:500px;
+height:500px;
+display:none;
+background-color:black;
+float:right;
+}
+
+#kleur2{
+
+width:500px;
+height:500px;
+display:none;
+background-color:green;
+
+float:right;
+}
+</style>
+</head>
+<body><button> Hover je muis over dit blokje</button>
+<div id="kleur1"></div>
+<div id="kleur2"></div>
+
+
+
+
+</body>
+</html>

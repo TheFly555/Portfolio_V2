@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<title> Opdracht 6 Javascript </title>
+<head>
+<script type="text/javascript" >
+
+function Vraag()
+{
+	var getal=0;
+	var teller=1;
+
+	while (teller <= 10)
+	{
+		getal = getal + parseInt(prompt("Getal? " + teller), 10);
+		alert (getal);
+		teller++;
+
+	}
+
+	if (teller > 10)
+	{
+		alert ("Uw antwoord is " + getal);
+	}
+
+}
+
+
+
+
+</script>
+</head>
+<body>
+
+<input type = "button" value="Prompt" onClick="Vraag()" />
+</body>
+</html>

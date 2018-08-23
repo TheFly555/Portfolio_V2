@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<body>
+	<script language="Javascript">
+		function naamcheck() {
+			if (window.document.form.email.value == "") {
+				alert("niets ingevult");
+			} else {
+				alert("goed");
+			}
+		}
+
+		function emailcheck() {
+			if (window.document.form.email.value == "" || window.document.form.email.value.indexOf("@") == -1) {
+				alert("geen goed email aderes");
+			} else {
+				alert("goed");
+			}
+		}
+
+		function plaatscheck() {
+			if (window.document.form.plaats.value.length < 3) {
+				alert("te kort");
+			} else {
+				alert("goed");
+			}
+		}
+	</script>
+	<form id="form" name="form" method="post">
+		</br>voornaam:<input type="text" name="naam"><input type="button" value="check naam" onClick="naamcheck()" /></br>
+		</br>woonplaats:<input type="text" name="plaats"><input type="button" value="check plaats" onClick="plaatscheck()" /></br>
+		</br>email:<input type="text" name="email"><input type="button" value="check mail" onClick="emailcheck()" /></br>
+	</form>
+	<p>let op voer alles in en check het dan pas!</p>
+</body>
+</html>

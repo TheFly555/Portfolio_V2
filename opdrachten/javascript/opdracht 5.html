@@ -1,0 +1,175 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+ <title>Opdracht javascript 5 </title>
+
+ <link rel="stylesheet" type="text/css" href="form.css"/>
+
+ <script langauge="javascript">
+
+
+ function optellen()
+{
+var first,sec,res;
+first=parseFloat(window.document.mijnformulier.getal1.value);
+sec=parseFloat(window.document.mijnformulier.getal2.value);
+res=first+sec;
+
+if (res < 100)
+{
+document.body.style.backgroundColor = "orange";
+alert("getal kleiner dan 100!");
+}
+else if (res == 100 )
+{
+document.body.style.backgroundColor = "red";
+alert("bingo, je getal is exact 100!");
+}
+else if  (res < 499 )
+{
+document.body.style.backgroundColor = "green";
+alert("getal groter dan 100!");
+}
+else if  (res > 500 )
+{
+alert("getal groter dan 500! Voer een lager getal in!");
+document.body.style.backgroundColor = "blue";
+}
+window.document.mijnformulier.txtresult.value=res;
+}
+
+
+
+
+function aftrekken()
+{
+var first,sec,res;
+first=parseFloat(window.document.mijnformulier.getal1.value);
+sec=parseFloat(window.document.mijnformulier.getal2.value);
+res=first-sec;
+
+if (res < 100)
+{
+document.body.style.backgroundColor = "orange";
+alert("getal kleiner dan 100!");
+}
+else if (res == 100 )
+{
+document.body.style.backgroundColor = "red";
+alert("bingo, je getal is exact 100!");
+}
+else if  (res < 499 )
+{
+document.body.style.backgroundColor = "green";
+alert("getal groter dan 100!");
+}
+else if  (res > 500 )
+{
+alert("getal groter dan 500! Voer een lager getal in!");
+document.body.style.backgroundColor = "blue";
+}
+window.document.mijnformulier.txtresult.value=res;
+}
+
+
+
+
+function vermenigvuldigen()
+{
+var first,sec,res;
+first=parseFloat(window.document.mijnformulier.getal1.value);
+sec=parseFloat(window.document.mijnformulier.getal2.value);
+res=first*sec;
+
+if (res < 100)
+{
+document.body.style.backgroundColor = "orange";
+alert("getal kleiner dan 100!");
+}
+else if (res == 100 )
+{
+document.body.style.backgroundColor = "red";
+alert("bingo, je getal is exact 100!");
+}
+else if  (res < 499 )
+{
+document.body.style.backgroundColor = "green";
+alert("getal groter dan 100!");
+}
+else if  (res > 500 )
+{
+alert("getal groter dan 500! Voer een lager getal in!");
+document.body.style.backgroundColor = "blue";
+}
+window.document.mijnformulier.txtresult.value=res;
+}
+
+
+
+
+
+
+function delen()
+{
+var first,sec,res;
+first=parseFloat(window.document.mijnformulier.getal1.value);
+sec=parseFloat(window.document.mijnformulier.getal2.value);
+res=first/sec;
+
+if (res < 100)
+{
+document.body.style.backgroundColor = "orange";
+alert("getal kleiner dan 100!");
+}
+else if (res == 100 )
+{
+document.body.style.backgroundColor = "red";
+alert("bingo, je getal is exact 100!");
+}
+else if  (res < 499 )
+{
+document.body.style.backgroundColor = "green";
+alert("getal groter dan 100!");
+}
+else if  (res > 500 )
+{
+alert("getal groter dan 500! Voer een lager getal in!");
+document.body.style.backgroundColor = "blue";
+}
+window.document.mijnformulier.txtresult.value=res;
+}
+
+</script>
+</head>
+
+<body>
+
+<br>
+
+
+<form name="mijnformulier">
+<table class="table1">
+<tr>
+<td class="td1"><input type="text" name="getal1" value=""></td>
+<td class="td1"><input type="text" name="getal2" value=""></td>
+
+</tr>
+<tr>
+<td colspan="2" align="center"  class="td1">
+<input name="btnadd" type="button" id="btnadd" value="+" onClick="optellen()">
+<input name="btnadd" type="button" id="btnadd" value="-" onClick="aftrekken()">
+<input name="btnadd" type="button" id="btnadd" value="x" onClick="vermenigvuldigen()">
+<input name="btnadd" type="button" id="btnadd" value=":" onClick="delen()">
+</td>
+</tr>
+<tr>
+<td align="center" colspan="2"  class="td1">
+<input type="text" name="txtresult" value="" >
+</td>
+</tr>
+</table>
+
+
+ </body>
+</html>

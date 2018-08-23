@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS calculator</title>
+
+</head>
+<body>
+  <h1>Rekenmachine Thijs de vlieger</h1><br><br>
+  <script type="text/javascript">
+		function rekenmachine(){
+			var a=document.getElementById("getal0").value;
+			var b=document.getElementById("getal1").value;
+			var op = document.getElementById("op").value;
+			if (op == "+"){
+				add(a, b);
+			}
+			else if (op == "-"){
+				sub(a, b);
+			}
+			else if (op == "*"){
+				mul(a, b);
+			}
+			else if (op == "/"){
+				div(a, b);
+			}
+		}
+
+		function add(a, b){
+			var antwoord = +a + +b;
+			document.getElementById("ans").innerHTML=antwoord;
+		}
+
+		function sub(a, b){
+			var antwoord = +a - +b;
+			document.getElementById("ans").innerHTML=antwoord;
+		}
+
+		function mul(a, b){
+			var antwoord = +a * +b;
+			document.getElementById("ans").innerHTML=antwoord;
+		}
+
+		function div(a, b){
+			var antwoord = +a / +b;
+			document.getElementById("ans").innerHTML=antwoord;
+		}
+	</script>
+<input type="number" id="getal0" onkeyup="rekenmachine()" onchange="rekenmachine()" onclick="rekenmachine()">
+<select id="op" onchange="rekenmachine()">
+	<option value="+">+</option>
+	<option value="-">-</option>
+	<option value="*">*</option>
+	<option value="/">/</option>
+</select>
+
+<input type="number" id="getal1" onkeyup="rekenmachine()" onchange="rekenmachine()" onclick="rekenmachine()"> &nbsp <p id="ans" style="display: inline;">0</p>
+</body>
+</html>

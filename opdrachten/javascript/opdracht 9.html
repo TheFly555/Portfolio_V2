@@ -1,0 +1,52 @@
+
+<html>
+
+<head>
+<title>Opdracht js 9</title>
+    <script language="javascript">
+        function list() {
+            kleuren = ["Rood", "Blauw", "Groen", "Geel", "Paars", "Oranje"];
+            var sel = document.getElementById('listkleur');
+            var fragment = document.createDocumentFragment();
+            var strUser = sel.options[sel.selectedIndex];
+            kleuren.forEach(function(kleuren, index) {
+                var opt = document.createElement('option');
+                opt.innerHTML = kleuren;
+                opt.value = kleuren;
+                fragment.appendChild(opt);
+            });
+            sel.appendChild(fragment);
+        }
+
+        function pc() {
+            pc = window.document.formulier.oke.selectedIndex;
+            alert(window.document.formulier.oke[pc].value);
+
+        }
+
+        function check() {
+            var x = document.getElementById("listkleur").selectedIndex;
+            var y = document.getElementById("listkleur").options;
+            alert("kleur = " + y[x].text);
+        }
+    </script>
+</head>
+
+<body onload="javascript:list()">
+
+    <form name="formulier">
+        <select name="oke" onChange="pc()">
+	 				<option value="">pc bedrijven</option>
+                    <option value="http://www.apple.com">apple</option>
+                    <option value="https://www.asus.com/NL/">asus</option>
+                    <option value="http://www.acer.com/ac/nl/NL/content/home">acer</option>
+                    <option value="http://www.toshiba.nl">tochiba</option>
+                    <option value="https://www.msi.com/index.php">msi</option>
+                    <option value="http://www.microsoftstore.com">microsoft</option>
+		</select>
+    </form>
+
+    <select onChange="check()" id="listkleur"></select>
+</body>
+
+</html>

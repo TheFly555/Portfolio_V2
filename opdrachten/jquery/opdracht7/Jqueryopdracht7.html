@@ -1,0 +1,75 @@
+
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="thijs.css">
+	<title>Opdrachat 7</title>
+	<script type="text/javascript" src="http://www.ictacademie.info/jquery171.js"></script>
+<script type="text/javascript" src="http://www.ictacademie.info/jquery.sortable.draggable.droppable.min.js"></script>
+<script type="text/javascript">
+$( function () {
+
+	var n = 0;
+	/* Drag and drop jQuery */
+	$( ".draggable" ).draggable();
+	$( "#thijs" ).droppable({
+		drop: function( event, ui ) {
+
+			if($(ui.draggable).hasClass("draggable")){
+
+
+			$( this )
+				.find( "p" )
+					.html( "Afbeelding slepen" );
+					n++;
+				$(".count").text("Er zijn " + n + " foto('s) geplaatst.");
+
+
+			}
+		}
+	});
+	$( "#thijs" ).droppable({
+		out: function(){
+			n--;
+			$(".count").text("Er zijn " + n + " foto('s) geplaatst.");
+		}
+	});
+});
+
+
+</script>
+</head>
+<body  bgcolor="black">>
+    <br><br><br><br><br><br><br><br><br>
+<font color="white">
+<div id="thijs" class="count">
+<p>Sleep uw foto naar boven </p>
+</div>
+
+<div id="imG">
+
+<div class="draggable" class="ui-widget-content">
+<img src="foto1.jpg" class="Img"/>
+</div>
+
+<div class="draggable" class="ui-widget-content">
+<img src="foto1.jpg" class="Img"/>
+</div>
+
+<div class="draggable" class="ui-widget-content">
+<img src="foto1.jpg" class="Img"/>
+</div>
+
+<div class="draggable" class="ui-widget-content">
+<img src="foto1.jpg" class="Img"/>
+</div>
+
+<div class="draggable" class="ui-widget-content">
+<img src="foto1.jpg" class="Img"/>
+</div>
+
+</div>
+
+
+</font>
+</body>
+</html>

@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Opdracht js 10</title>
+    <script language="javascript">
+        function controleer() {
+            var quiz = window.document.formulier.vraag.value;
+            alert(quiz);
+            if (quiz == "kansanpani") {
+                alert("goed zo nerd");
+            } else {
+                alert("ha fout");
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <form name="formulier" action="opdracht_10_js.html" method="post">
+
+        voornaam
+        <input type="text" name="vn" id="voornaam" required="required"></br>
+        </br>
+        achternaam
+        <input type="text" name="an" id="achternaam" required="required"></br>
+        </br>
+        <h1>wat is geen os ;_)</h1>
+        <p>OS X</p>
+        <input type="radio" name="vraag" value="osx">
+        <p>linux</p>
+        <input type="radio" name="vraag" value="linux">
+        <p>winblows</p>
+        <input type="radio" name="vraag" value="windows">
+        <p>Android</p>
+        <input type="radio" name="vraag" value="android">
+        <p>Kansanpani</p>
+        <input type="radio" name="vraag" value="kansanpani">
+
+        <br><br><br>
+
+        <input type="button" onClick="controleer()" value="controleer">
+    </form>
+
+</body>
+
+</html>

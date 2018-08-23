@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<script language="Javascript">
+	var start = 0;
+
+	function a1() {
+		start++;
+		var text = "";
+		var max = parseInt(prompt("voer getal in"), 10);
+		var nummer = Math.round(Math.random() * 50 + 1);
+		if (max > 50) {
+			alert("lager dan 50");
+			start = 0;
+			a2()
+		} else {
+			alert("je gooide  " + max + " de pc heeft  " + nummer + " gegooid ")
+		}
+		text += ("getal " + start + " =  je gooide : " + max + "  De pc gooide : " + nummer + "</br>");
+		document.getElementById("tekst").innerHTML = text;
+		if (max === nummer) {
+
+			alert("lekker bezig bingo!")
+		}
+	}
+
+	function a2() {
+		for (i = 0; i < 5; i++) {
+			a1();
+		}
+	}
+</script>
+
+<body>
+	<input type="button" value="klik" onClick="a2()" /><br>
+	<a id="tekst"> je getal</a>
+</body>
+</html>

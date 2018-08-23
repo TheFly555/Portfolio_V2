@@ -1,0 +1,52 @@
+
+<html>
+
+<head>
+	<title>opdracht 11 js</title>
+	<script language="javascript">
+		function reken1() {
+			var inputNum1 = document.form1.input1.value;
+			var result = Math.floor(Math.sqrt(inputNum1) * 100) / 100;
+			alert(result);
+			document.form1.answer.value = result;
+		}
+
+		function reken2() {
+			var bedrag = parseInt(window.document.getElementById("bedrag").value, 10);
+			var rente = window.document.getElementById("rente").value;
+			var looptijd = parseInt(window.document.getElementById("looptijd").value, 10);
+
+			var totaal = bedrag * Math.pow((rente / 100 + 1), looptijd);
+			var afronden = totaal.toFixed(2)
+			window.document.getElementById("totaal").value = afronden;
+
+		}
+	</script>
+</head>
+
+<body>
+	<form name=form1>
+		<input type="text" name="input1" size=10>
+		<input type="button" value="reken :-)" onClick='reken1()'>
+	</form>
+	<br><br>
+
+	<form name="formulier" action="" method="post">
+		inkomen<input type="text" name="bedrag" id="bedrag" required="required"></br>
+		rente<input type="text" name="rente" id="rente" value="1.2" required="required"></br>
+
+		jaren
+		<script language="javascript">
+			document.write("<select id='looptijd'>");
+			for (var i = 1; i <= 10; i++) {
+				document.write("<option>" + i + "</option>");
+			}
+			document.write("</select>");
+		</script>
+		<br> totaal
+		<input type="text" name="totaal" id="totaal" value="0" required="required"></br>
+		<input type="button" onClick="reken2()" value="totaal^^">
+	</form>
+</body>
+
+</html>

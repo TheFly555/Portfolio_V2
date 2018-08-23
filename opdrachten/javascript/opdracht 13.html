@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<script language="Javascript">
+	function lijst1(field)
+	{
+		for (i = 0; i < field.length; i++)
+		field[i].checked = true;
+	}
+	function lijst2(field) {
+		for (i = 0; i < field.length; i++)
+		field[i].checked = false;
+	}
+	function bestel() {
+		var checkboxes = document.getElementsByName('checklist');
+		var waarde = "";
+		document.getElementById("titel").innerHTML = "je besteling";
+		for (var i = 0, n = checkboxes.length; i < n; i++) {
+			if (checkboxes[i].checked) {
+			waarde += " </br>" + checkboxes[i].value;
+			}
+		}
+		if (waarde) waarde = waarde.substring(1);
+		document.getElementById("bestel").innerHTML = waarde;
+	}
+</script>
+<body>
+	<form name="formulier" action="" method="post">
+		<input type="checkbox" name="checklist" value="mac"/>mac</br>
+		<input type="checkbox" name="checklist" value="asus"/>asus</br>
+		<input type="checkbox" name="checklist" value="acer"/>acer</br>
+		<input type="checkbox" name="checklist" value="toshiba"/>toshiba</br>
+		<input type="checkbox" name="checklist" value="msi"/>msi</br>
+		<input type="button" name="select alles" value="Uncheck alles" onClick="lijst2(document.formulier.checklist);"/>
+		<input type="button" name="unselect alles" value="Check alles" onClick="lijst1(document.formulier.checklist);"/>
+		<input type="button" name="Bestell" value="Bestel" onClick="bestel(document.formulier.checklist);"/>
+	</form>
+	<p id="titel"></p>
+	<p id="bestel"></p>
+</body>
+</html>

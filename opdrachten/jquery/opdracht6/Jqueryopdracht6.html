@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JQueryOpdracht 6</title>
+    <link rel="stylesheet" href="positie.css">
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="thijs.css">
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="bjqs-1.3.min.js"></script>
+
+  </head>
+  <body bgcolor="grey">
+  <br>  <br>  <br>  <br>  <br>  <br>
+    <div id="container">
+    <div id="banner-fade">
+        <ul class="bjqs">
+          <li><img src="motor1.jpg" title="Yamaha R1"></li>
+          <li><img src="motor2.jpg" title="Kawasaki zx6r"></li>
+          <li><img src="motor3.jpg" title="Kawasaki H2R"></li>
+		      <li><img src="motor4.jpg" title="Kawasaki Z250"></li>
+		      <li><img src="motor5.jpg" title="Honda Grom"></li>
+
+        </ul>
+      </div>
+      <script class="secret-source">
+        jQuery(document).ready(function($) {
+          $('#banner-fade').bjqs({
+            height      : 320,
+            width       : 620,
+            responsive  : true
+          });
+        });
+      </script>
+      </script>
+    </div>
+    </body>
+</html>

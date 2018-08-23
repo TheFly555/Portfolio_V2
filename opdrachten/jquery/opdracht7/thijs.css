@@ -1,0 +1,44 @@
+.Img {
+
+	height: 100px;
+	text-align:center;
+}
+
+
+#karan {
+
+	width: 75%;
+	height: 150px;
+	padding: 0.5em;
+	float: both;
+	margin: 0 auto;
+	border: 1px solid red;
+	background: black;
+	text-align:center;
+}
+
+#imG {
+	color:red;
+	width: 75%;
+	height: 150px;
+	padding: 0.5em;
+	float: both;
+	margin: 0 auto;
+	border: 1px solid white;
+	background: black;
+	border: 1px solid white;
+	text-align:center;
+}
+
+.draggable{
+
+
+	top: 10px;
+	height: auto;
+	width: auto;
+	float: left;
+	border: 1px solid white;
+
+	text-align:center;
+
+}
